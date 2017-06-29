@@ -5,6 +5,8 @@
     <title>Mystery Word Game</title>
   </head>
   <body>
+    <p>{{randomWordList}}</p>
+    <p>Guesses Left{{guessesLeft}}
     <p>{{letterGuess}}</p>
     <ul>
       {{#selections}}
@@ -14,7 +16,7 @@
         {{/selections}}
     </ul>
     <form action="/" method="post" class="letterChoosing">
-      <input type="text" name="letters" placeholder="Choose a letter" maxlength="1">
+      <input type="text" name="letters" placeholder="Choose a letter" autofocus = "autofocus" maxlength="1">
       <input type="submit">
     </form>
   </body>
