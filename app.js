@@ -37,9 +37,6 @@ var randomWord = wordChoices[Math.floor(Math.random() * wordChoices.length)];
 var randomWordList = randomWord.split('');
 var arrLength = randomWordList.length;
 
-const winMessage = "Winner, Winner, Chicken dinner.......or whatever.";
-let correct = false
-let wrongGuess = 0;
 
 console.log(randomWordList);
 
@@ -74,16 +71,9 @@ function checkGuess (req, res) {
 
 }
 
-
-// console.log(letterGuess);
-// console.log(selections);
-
-
 // var randomWord = function(min, max) {
 //   return Math.floor(Math.random() * (max - min + 1) + min);
 // };
-
-// use router.get instead of app.get to make it link together.
 
 
 app.get('/', function (req, res){
@@ -110,16 +100,9 @@ app.get('/win', function(req, res){
   res.render('win');
 })
 
-// app.post('/win', function(req, res){
-//
-// })
 app.get('/lose', function(req, res){
   res.render('lose');
 })
-
-// app.post('/lose', function(req,res){
-//
-// })
 
 app.listen(3000, function(){
   console.log('It has begun!')
